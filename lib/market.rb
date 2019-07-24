@@ -34,4 +34,14 @@ class Market
     vendors_has_item
   end
 
+  def sorted_item_list
+      all_items_stocked = []
+
+    @vendors.each do |vendor|
+      vendor.inventory.map do |item, num|
+        all_items_stocked << item
+      end
+    end
+    all_items_stocked.uniq.sort
+  end
 end
