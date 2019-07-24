@@ -56,4 +56,21 @@ class Market
     end
     total_inventory_hash
   end
+
+  def check_item_quantity(item, quantity)
+
+    if total_inventory.key?(item) && total_inventory[item] > quantity
+      true
+    else
+      false
+    end
+  end
+
+  def sell(item, quantity)
+
+    in_stock = check_item_quantity(item, quantity)
+
+    #if in_stock
+
+  end
 end
