@@ -70,7 +70,9 @@ class Market
 
     in_stock = check_item_quantity(item, quantity)
 
-    #if in_stock
+    if in_stock == true
+      @vendors.each do |vendor|
+
 
   end
 end

@@ -89,5 +89,7 @@ class MarketTest < MiniTest::Test
     assert_equal false, @market.sell("Onions", 1)
     assert_equal true, @market.sell("Banana Nice Cream", 5)
     assert_equal true, @market.sell("Peaches", 40)
+
+    assert_equal 0, @vendor_1.check_stock("Peaches")
   end
 end
