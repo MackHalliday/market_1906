@@ -69,10 +69,14 @@ class Market
   def sell(item, quantity)
 
     in_stock = check_item_quantity(item, quantity)
+    in_stock_vendors = vendors_that_sell(item)
+    # binding.pry
 
     if in_stock == true
-      @vendors.each do |vendor|
-
-
+      in_stock_vendors.each do |vendor|
+        vendor.sell_item(item, quantity)
+      end
+    end
+    in_stock
   end
 end

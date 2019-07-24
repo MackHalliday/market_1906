@@ -17,10 +17,12 @@ class Vendor
     @inventory[item] += num
   end
 
-  def sell_items(item, num)
-    #binding.pry
-    if @inventory[item] > 0
-      @inventory[item] -= num
+  def sell_item(item, num)
+
+    unless @inventory[item] == 0
+      num.times do
+        @inventory[item] -= 1
+      end
     end
   end
 end

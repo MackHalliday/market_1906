@@ -41,8 +41,8 @@ class VendorTest < MiniTest::Test
   def test_vendor_can_sell_item
     @vendor.stock("Peaches", 25)
     @vendor.stock("Tomatoes", 12)
-    
-    @vendor.sell_items("Peaches", 10)
+
+    @vendor.sell_item("Peaches", 10)
 
     assert_equal 15, @vendor.check_stock("Peaches")
   end
