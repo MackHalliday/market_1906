@@ -36,7 +36,7 @@ pry(main)> vendor.stock("Peaches", 30)
 pry(main)> vendor.check_stock("Peaches")
 #=> 30
 
-pry(main)> vendor.stock("Peaches", 25)
+x pry(main)> vendor.stock("Peaches", 25)
 
 pry(main)> vendor.check_stock("Peaches")
 #=> 55
