@@ -44,4 +44,16 @@ class Market
     end
     all_items_stocked.uniq.sort
   end
+
+  def total_inventory
+
+    total_inventory_hash = Hash.new(0)
+
+    @vendors.each do |vendor|
+      vendor.inventory.map do |item, num|
+        total_inventory_hash[item] += num
+      end
+    end
+    total_inventory_hash
+  end
 end
